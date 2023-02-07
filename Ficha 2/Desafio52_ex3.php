@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <Form action = ".php" method="GET">
+    <Form action = "<?php echo $_SERVER['PHP_SELF'];?>" method="GET">
         Primeiro nº: <input type="text" name="a"> <br>
         Segundo nº: <input type="text" name="b"> <br>
                     <input type="submit" value = "Calcular">

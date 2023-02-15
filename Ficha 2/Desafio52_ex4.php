@@ -6,6 +6,11 @@
     <title>Desafio 5.2 - ex4</title>
 </head>
 <body>
+    <?php
+        if(!$_GET)
+        {
+    ?>
+
     <Form action = "<?php echo $_SERVER['PHP_SELF'];?>" method="GET">
         Primeiro nº: <input type="text" name="a"> <br>
         Segundo nº: <input type="text" name="b"> <br>
@@ -15,17 +20,20 @@
 
     <?php
 
-        $a = $_GET['a'];
-        $b = $_GET['b'];
-        $c = $_GET['c'];
-        $media = $a + $b + $c;
-        $media = $media / 3;
+        }
+        else{
 
-        settype($media, "int");
+            $a = $_GET['a'];
+            $b = $_GET['b'];
+            $c = $_GET['c'];
+            $media = $a + $b + $c;
+            $media = $media / 3;
+
+            settype($media, "int");
 
 
-        echo "A média de ", $a, " , " , $b, " e ", $c, " é ", $media;
-
+            echo "A média de ", $a, " , " , $b, " e ", $c, " é ", $media;
+        }
 ?>
 </body>
 </html>

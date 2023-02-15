@@ -7,19 +7,25 @@
 </head>
 <body>
 
-    <Form action = "<?php echo $_SERVER['PHP_SELF'];?>" method="GET">
-        Primeiro nº: <input type="text" name="a"> <br>
-        Segundo nº: <input type="text" name="b"> <br>
-                    <input type="submit" value = "Calcular">
-    </Form>
+    <?php
+        if(!$_GET)
+        {
+    ?>
+        <Form action = "<?php echo $_SERVER['PHP_SELF'];?>" method="GET">
+            Primeiro nº: <input type="text" name="a"> <br>
+            Segundo nº: <input type="text" name="b"> <br>
+                        <input type="submit" value = "Calcular">
+        </Form>
 
     <?php
+        }
+        else{
 
-        $a = $_GET['a'];
-        $b = $_GET['b'];
+            $a = $_GET['a'];
+            $b = $_GET['b'];
 
-        echo $a ," + ", $b, " = " ,$a + $b;
-
+            echo $a ," + ", $b, " = " ,$a + $b;
+        }
     ?>
 </body>
 </html>

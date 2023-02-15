@@ -16,7 +16,8 @@
     //Neste ifs verifica se as variáveis estam prenchidas ou não
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["name"])) {
+        if (empty($_POST["name"])) 
+        {
             $nameErr = "Name is required";
     }     else {
         $name = test_input($_POST["name"]);

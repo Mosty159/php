@@ -8,7 +8,7 @@
     <table border="2" bordercolor="red" align="center" width="10%">
         <?php
 
-            if (isset($_GET['numero']) && is_numeric($_GET['numero'])) {
+            if (isset($_POST['num1']) && is_numeric($_POST['num1'])) {
     
 
 
@@ -22,7 +22,7 @@
                 echo "</tr>";
             }
             }else {
-           echo "O valor não é um número"
+                echo "O valor não é um número";
             }
         ?>
     </table>

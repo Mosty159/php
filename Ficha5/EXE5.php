@@ -7,6 +7,8 @@
     <title>EXE5</title>
 </head>
 <body>
-    
+    <?php
+        $turma = array()
+    ?>
 </body>
 </html>

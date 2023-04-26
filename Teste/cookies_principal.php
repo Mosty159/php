@@ -24,6 +24,14 @@
 
             if($ligado == 1){
                 $nome = $_COOKIE['nome'];
+                if(isset($_COOKIE['nvisitas'])) {
+                    $nvisitas = $_COOKIE['nvisitas'] + 1;
+                }
+                else{
+                    $nvisitas = 1;
+                }
+    
+                setcookie("nvisitas", $nvisitas, time() + 3600);
                 echo "<h1>Bem vindo ", $nome, "!</h1>";
                 echo "Visita Nº", $nvisitas;
                 echo '<form action = "cookies_testar_login.php" method = "POST">';
